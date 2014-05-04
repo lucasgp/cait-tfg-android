@@ -16,10 +16,11 @@ public class TrackingJavascriptInterface {
     }
 
     @JavascriptInterface
-    public void startTracking(String trackingId, int interval) {
+    public void startTracking(String trackingId, long interval, float minDisplacement) {
         Intent intent = new Intent(context, TrackingService.class);
         intent.putExtra("trackingId", trackingId);
         intent.putExtra("interval", interval);
+        intent.putExtra("minDisplacement", minDisplacement);
         context.startService(intent);
         Log.i("ParticipantTracker", "Tracking service started!");
     }
