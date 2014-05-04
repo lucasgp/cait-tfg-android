@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Participant Tracker/Participant Tracker.iml" filepath="$PROJECT_DIR$/Participant Tracker/Participant Tracker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ParticipantTracker.iml" filepath="$PROJECT_DIR$/ParticipantTracker.iml" />
+    </modules>
+  </component>
+</project>
+
