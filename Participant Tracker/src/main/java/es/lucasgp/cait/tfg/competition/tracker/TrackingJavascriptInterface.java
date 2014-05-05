@@ -26,8 +26,13 @@ public class TrackingJavascriptInterface {
     }
 
     @JavascriptInterface
-    public void stopTracking() {
-        context.stopService(new Intent(context, TrackingService.class));
-        Log.i("ParticipantTracker", "Tracking service stopped!");
+    public boolean stopTracking() {
+        boolean result = context.stopService(new Intent(context, TrackingService.class));
+        if(result) {
+            Log.i("ParticipantTracker", "Tracking service stopped!");
+        } else {
+            Log.i("ParticipantTracker", "Attempt to stop a service not started");
+        }
+        return result;
     }
 }

@@ -62,8 +62,8 @@ public class TrackingService extends Service implements GooglePlayServicesClient
             this.locationRequest = LocationRequest.create()
                     .setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY)
                     .setInterval(this.interval)
-                    .setFastestInterval(this.interval)
-                    .setSmallestDisplacement(this.minDisplacement);
+                    .setFastestInterval(this.interval);
+                    //.setSmallestDisplacement(this.minDisplacement);
 
             this.locationClient = new LocationClient(this, this, this);
             this.locationClient.connect();
